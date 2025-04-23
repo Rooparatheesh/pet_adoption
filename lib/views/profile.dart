@@ -3,6 +3,7 @@ import 'package:http/http.dart' as http;
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:pet_adoption/views/AddPetPage.dart';
 import 'package:pet_adoption/views/sign_in.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -133,12 +134,17 @@ class ProfilePage extends StatelessWidget {
             ),
             ListTile(
               leading: const Icon(Icons.home, color: Colors.orange),
-              title: const Text("Home"),
-              onTap: () {},
+              title: const Text("Add pet"),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const AddPetPage()),
+                );
+              },
             ),
             ListTile(
               leading: const Icon(Icons.pets, color: Colors.orange),
-              title: const Text("My Pets"),
+              title: const Text("My Adoptions"),
               onTap: () {},
             ),
             ListTile(
